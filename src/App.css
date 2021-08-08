@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+.logo_part a {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 60px;
+  background-color: #fd79a8;
+  
+}
+nav .nav_links {
+  display: flex;
+  width: 30%;
+  justify-content:space-around;
+  
+}
+.nav_links a {
+  font-size: 1rem;
+}
+.nav_links a:hover {
+  border-bottom: 1px solid #fff;
+}
+.icon_bar {
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 768px){
+	.icon_bar {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  
+  nav .nav_links{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #fd79a1;
+    width: 40%;
+    padding: 40px;
+    transform: translateX(-500px);
+    transition: 0.5s ease-in-out;
+  }
+  nav .nav_links li{
+    padding: 25px;
+    border-bottom: 1px solid #fff;
+  }
+  nav .nav_links li:last-of-type {
+    border-bottom: 0px solid #000;
+  }
+  nav .nav_links a:hover {
+    border-bottom: 0px solid #fff;
   }
 }
